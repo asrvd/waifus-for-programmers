@@ -18,20 +18,24 @@ import {
 
 export default function Nav(props) {
     const [Current, setCurrent] = useState([])
+    const [Curr, setCurr] = useState()
+    const [Title, setTitle] = useState("Languages")
     const data = props.data
-    const handleclick = (path) => {
+    const handleclick = (path, name) => {
         //console.log(path);
+        setTitle(name);
         getcont(path)
         .then(data => {
             setCurrent(data)
         })
+        window.scrollTo(0, 0)
     }
     //console.log(typeof data)
     const list = data.map(item => {
         if (item.name.slice(-3) != ".md") {
             return (
                 // <li id={item.name} onClick={() => handleclick(item.path)}>{item.name}</li>
-                <MenuItem id={item.name} onClick={() => handleclick(item.path)}>{item.name}</MenuItem>
+                <MenuItem id={item.name} onClick={() => handleclick(item.path, item.name)}>{item.name}</MenuItem>
             )
         }
     })
@@ -40,17 +44,28 @@ export default function Nav(props) {
             <div className="main-nav">
                 <Menu matchWidth="true">
                     <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                        Languages
+                        {Title}
                     </MenuButton>
-                    <MenuList>
+                    <MenuList className="nav-list" h='100vh' overflowY='scroll'>
                         {list}
                     </MenuList>
                 </Menu>
             </div>
             <div className="main-grid">
-                <MainGrid
-                    data={Current}
-                />
+                <div className="navbar">
+                    <p>
+                        <samp>
+                            <a href="http://waifus-for-programmers.vercel.app/">Waifus for Programmers!</a> .
+                            <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books" target='blank'> A Web Viewer made for Anime Girls Holding Programming Books</a> .
+                            <a href="https://github.com/asheeeshh/waifus-for-programmers" target='blank'> ⭐ on GitHub</a>
+                        </samp>
+                    </p>
+                </div>
+                <div className="gallery">
+                    <MainGrid
+                        data={Current}
+                    />
+                </div>
             </div>
         </div>
     )
