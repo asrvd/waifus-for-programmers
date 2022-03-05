@@ -2,7 +2,8 @@ import { getcont } from "../utils/api";
 import MainGrid from "./grid";
 import './nav.css'
 import { useState, useEffect } from "react";
-import { PhoneIcon, AddIcon, WarningIcon, ChevronDownIcon } from '@chakra-ui/icons'
+import { PhoneIcon, AddIcon, WarningIcon, ChevronDownIcon, StarIcon } from '@chakra-ui/icons'
+import { FaGithub, FaDiscord, FaStar } from 'react-icons/fa'
 import {
     Menu,
     MenuButton,
@@ -14,6 +15,9 @@ import {
     MenuDivider,
     Button,
     Flex,
+    Icon,
+    HStack,
+    Heading
   } from '@chakra-ui/react'
 
 export default function Nav(props) {
@@ -53,13 +57,12 @@ export default function Nav(props) {
             </div>
             <div className="main-grid">
                 <div className="navbar">
-                    <p>
-                        <samp>
-                            <a href="http://waifus-for-programmers.vercel.app/">Waifus for Programmers!</a> .
-                            <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books" target='blank'> A Web Viewer made for Anime Girls Holding Programming Books</a> .
-                            <a href="https://github.com/asheeeshh/waifus-for-programmers" target='blank'> ⭐ on GitHub</a>
-                        </samp>
-                    </p>
+                    <HStack spacing='15px'>
+                        <h3>Waifus for Programmers.</h3>
+                        <a href="https://github.com/asheeeshh/waifus-for-programmers" target="blank"><Icon as={ FaGithub } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
+                        <a href="https://discord.com/users/784363251940458516" target="blank"><Icon as={ FaDiscord } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
+                        <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books" target="blank"><Icon as={ FaStar } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
+                    </HStack>
                 </div>
                 <div className="gallery">
                     <MainGrid

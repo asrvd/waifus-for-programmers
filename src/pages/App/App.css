@@ -1,0 +1,14 @@
+body {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  text-align: center;
+  background-color: #1A202C;
+  width: 100vw;
+  height: 100vh;
+}
+
