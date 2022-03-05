@@ -8,10 +8,7 @@ export default function MainGrid(props) {
     //console.log(data)
     const ims = data.map(item => {
         return (
-            <div className='image-card'>
-                <img src={item.url} alt={item.name} width="500px" height="300px"/>
-                <span className='image-credit'>by <a href="">@{item.author}</a></span>
-            </div>
+            <img src={item.url} alt={item.name} width="500px" height="300px"/>
         )
         
     })
