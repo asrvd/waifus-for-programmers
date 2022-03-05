@@ -14,7 +14,7 @@ body {
       rgba(9, 13, 22, 0.5)
     ), url('https://i.imgur.com/tYWvQg7.png') !important;
   background-repeat: no-repeat !important;
-  background-color: none !important;
+  background-color: #1A202C !important;
   background-size: cover;
 }
 
