@@ -25,6 +25,13 @@ export default function Nav(props) {
     const [Curr, setCurr] = useState()
     const [Title, setTitle] = useState("Languages")
     const data = props.data
+    useEffect(() => {
+        setTitle("Rust");
+        getcont("Rust")
+        .then(data => {
+            setCurrent(data)
+        })
+    }, [])
     const handleclick = (path, name) => {
         //console.log(path);
         setTitle(name);

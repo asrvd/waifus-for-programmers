@@ -18,6 +18,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-modal-image": "^2.5.0",
     "react-router-dom": "^6.2.2"
   },
   "devDependencies": {

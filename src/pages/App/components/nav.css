@@ -67,6 +67,26 @@ img {
     text-decoration: underline;
 }
 
+::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    width: 8px;
+    height:8px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4A5568;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4A5568;
+}
+
 @media screen and (max-width: 600px) {
     .main {
         display: flex;
