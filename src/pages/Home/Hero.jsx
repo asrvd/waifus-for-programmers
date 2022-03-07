@@ -31,7 +31,7 @@ const Hero = () => {
             fontSize={{ base: "3xl", md: "4xl" }}
             fontWeight="bold"
             lineHeight="shorter"
-            color={useColorModeValue("gray.900", "white")}
+            color="white.600"
           >
             An App made for Programmer Weebs.
           </chakra.h1>
