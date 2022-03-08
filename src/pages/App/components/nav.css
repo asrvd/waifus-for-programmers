@@ -87,6 +87,10 @@ img {
     background: #4A5568;
 }
 
+span {
+    padding: 10px;
+}
+
 @media screen and (max-width: 600px) {
     .main {
         display: flex;
