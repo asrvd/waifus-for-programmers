@@ -1,7 +1,7 @@
 body {
   background-repeat: no-repeat;
   background-position-x: center;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
 }
 
@@ -13,7 +13,6 @@ body {
 .App {
   /* text-align: center; */
   background-color: #1A202C;
-  background-size: cover;
   background-image: none;
   width: 100vw;
   height: 120vh;

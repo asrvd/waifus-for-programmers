@@ -4,6 +4,7 @@ import './nav.css'
 import { useState, useEffect } from "react";
 import { PhoneIcon, AddIcon, WarningIcon, ChevronDownIcon, StarIcon } from '@chakra-ui/icons'
 import { FaGithub, FaDiscord, FaStar } from 'react-icons/fa'
+import { AiOutlineSearch } from "react-icons/ai"
 import {
     Menu,
     MenuButton,
@@ -13,16 +14,20 @@ import {
     MenuGroup,
     MenuOptionGroup,
     MenuDivider,
+    InputGroup,
+    InputLeftElement,
+    Input,
     Button,
     Flex,
     Icon,
     HStack,
     Heading
   } from '@chakra-ui/react'
+import Search from "./search";
 
 export default function Nav(props) {
     const [Current, setCurrent] = useState([])
-    const [Curr, setCurr] = useState()
+    const [Lang, setLang] = useState([])
     const [Title, setTitle] = useState("Languages")
     const data = props.data
     useEffect(() => {
@@ -30,14 +35,27 @@ export default function Nav(props) {
         getcont("Rust")
         .then(data => {
             setCurrent(data)
+            setLang(data)
         })
     }, [])
+    const handleChange = (e) => {
+        if (e.key === "Enter") {
+            var curr = Lang.filter((el) => {
+                if (el.name.toLowerCase().includes(e.target.value.toLowerCase()) && e.target.value !== "") {
+                    return el
+                    //setCurrent([el])
+                }
+            })
+            setCurrent(curr)
+        }
+    }
     const handleclick = (path, name) => {
         //console.log(path);
         setTitle(name);
         getcont(path)
         .then(data => {
             setCurrent(data)
+            setLang(data)
         })
         window.scrollTo(0, 0)
     }
@@ -64,7 +82,20 @@ export default function Nav(props) {
             </div>
             <div className="main-grid">
                 <div className="navbar">
-                    <HStack spacing='15px'>
+                    <div className="search-bar">
+                        <InputGroup>
+                            <InputLeftElement pointerEvents="none">
+                            <AiOutlineSearch />
+                            </InputLeftElement>
+                            <Input 
+                                type="tel" 
+                                placeholder="Search..."
+                                onKeyPress={(e) => handleChange(e)}
+                                width="100%" 
+                            />
+                        </InputGroup>
+                    </div>
+                    <HStack spacing='15px' className="nav-head">
                         <h3>Waifus for Programmers.</h3>
                         <a href="https://github.com/asheeeshh/waifus-for-programmers" target="blank"><Icon as={ FaGithub } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
                         <a href="https://discord.com/users/784363251940458516" target="blank"><Icon as={ FaDiscord } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
