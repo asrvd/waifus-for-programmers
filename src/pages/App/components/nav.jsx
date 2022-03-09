@@ -40,7 +40,8 @@ export default function Nav(props) {
     const handleChange = (e) => {
         if (e.key === "Enter") {
             var curr = Lang.filter((el) => {
-                if (el.name.toLowerCase().includes(e.target.value.toLowerCase()) && e.target.value !== "") {
+                if (el.name.toLowerCase().includes(e.target.value.toLowerCase()) && e.target.value !== " ") {
+                    //console.log(e.target.value)
                     return el
                     //setCurrent([el])
                 }
