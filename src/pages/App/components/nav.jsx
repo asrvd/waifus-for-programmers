@@ -23,7 +23,6 @@ import {
     HStack,
     Heading
   } from '@chakra-ui/react'
-import Search from "./search";
 
 export default function Nav(props) {
     const [Current, setCurrent] = useState([])
