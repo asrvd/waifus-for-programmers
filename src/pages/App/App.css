@@ -3,6 +3,7 @@ body {
   background-position-x: center;
   height: 120vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 #root {
