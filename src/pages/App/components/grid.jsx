@@ -18,7 +18,7 @@ export default function MainGrid(props) {
         
     })
     return (
-        <SimpleGrid columns={2} spacing={10} overflowY='scroll' h="100%" paddingRight={'5px'}>
+        <SimpleGrid columns={2} spacing={10} overflowY='scroll' h="100%" paddingRight={'10%'}>
             {ims}
         </SimpleGrid>
     )
