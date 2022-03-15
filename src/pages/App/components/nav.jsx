@@ -75,7 +75,7 @@ export default function Nav(props) {
                     <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                         {Title}
                     </MenuButton>
-                    <MenuList className="nav-list" h='100vh' overflowY='scroll'>
+                    <MenuList className="nav-list" h='90vh' overflowY='scroll'>
                         {list}
                     </MenuList>
                 </Menu>
@@ -98,7 +98,7 @@ export default function Nav(props) {
                     <HStack spacing='15px' className="nav-head">
                         <h3>Waifus for Programmers.</h3>
                         <a href="https://github.com/asheeeshh/waifus-for-programmers" target="blank"><Icon as={ FaGithub } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
-                        <a href="https://discord.com/users/784363251940458516" target="blank"><Icon as={ FaDiscord } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
+                        <a href="https://discord.gg/7CYP8pKzDB" target="blank"><Icon as={ FaDiscord } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
                         <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books" target="blank"><Icon as={ FaStar } w='20px' h="20px" color="gray.300" cursor={'pointer'}/></a>
                     </HStack>
                 </div>

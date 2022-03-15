@@ -1,4 +1,4 @@
-import { SimpleGrid, Box } from '@chakra-ui/react'
+import { SimpleGrid } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 import { getauthor } from '../utils/api'
 import ModalImage from "react-modal-image";
@@ -10,7 +10,6 @@ export default function MainGrid(props) {
     const ims = data.map(item => {
         return (
             <ModalImage
-                className="gallery-img"
                 small={item.url}
                 large={item.url}
                 alt={item.name}
@@ -19,16 +18,8 @@ export default function MainGrid(props) {
         
     })
     return (
-        <Box
-        padding={2}
-        className='gallery-cont'
-        w="100%"
-        maxW="900px"
-        mx="auto"
-        bg="gray.800"
-        sx={{ columnCount: [1, 2, 3], columnGap: "8px" }}
-        >
+        <SimpleGrid columns={2} spacing={10} overflowY='scroll' h="100%" paddingRight={'10%'}>
             {ims}
-        </Box>
+        </SimpleGrid>
     )
 }
