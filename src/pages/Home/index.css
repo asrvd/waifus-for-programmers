@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      rgba(9, 13, 22, 0.5), 
+      rgba(9, 13, 22, 0.5)
+    ), url('https://i.imgur.com/tYWvQg7.png') !important;
+  background-repeat: no-repeat !important;
+  background-color: #1A202C !important;
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .hero-btns {
+    flex-direction: column;
+  }
+  .hero {
+    text-align: center;
+  }
+  
+}
