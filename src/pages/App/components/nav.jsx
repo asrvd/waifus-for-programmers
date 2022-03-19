@@ -72,7 +72,7 @@ export default function Nav(props) {
         <div className="main">
             <div className="main-nav">
                 <Menu matchWidth="true">
-                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                    <MenuButton as={Button} className="nav-drop-button" rightIcon={<ChevronDownIcon />}>
                         {Title}
                     </MenuButton>
                     <div className="nav-outer-list">

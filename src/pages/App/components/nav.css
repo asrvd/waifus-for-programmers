@@ -177,5 +177,7 @@ span {
     .grid-box {
         padding-right: 0;
     }
-    
+    .nav-drop-button {
+        width: 100% !important;
+    }
 }
