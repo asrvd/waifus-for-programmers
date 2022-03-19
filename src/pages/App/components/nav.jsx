@@ -75,9 +75,11 @@ export default function Nav(props) {
                     <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                         {Title}
                     </MenuButton>
-                    <MenuList className="nav-list" h='90vh' overflowY='scroll'>
-                        {list}
-                    </MenuList>
+                    <div className="nav-outer-list">
+                        <MenuList className="nav-list" h='90vh' overflowY='scroll'>
+                            {list}
+                        </MenuList>
+                    </div>
                 </Menu>
             </div>
             <div className="main-grid">

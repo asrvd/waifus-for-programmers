@@ -109,6 +109,14 @@ span {
     padding: 10px;
 }
 
+.nav-outer-list {
+    z-index: 3;
+}
+
+.search-icon {
+    z-index: 1;
+}
+
 @media screen and (max-width: 600px) {
     body, html {
         overflow-x: hidden;
