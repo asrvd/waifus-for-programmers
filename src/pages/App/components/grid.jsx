@@ -14,6 +14,7 @@ export default function MainGrid(props) {
                 small={item.url}
                 large={item.url}
                 alt={item.name}
+                key={item.key}
             />
         )
         

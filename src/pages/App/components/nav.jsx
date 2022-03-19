@@ -64,7 +64,7 @@ export default function Nav(props) {
         if (item.name.slice(-3) != ".md") {
             return (
                 // <li id={item.name} onClick={() => handleclick(item.path)}>{item.name}</li>
-                <MenuItem id={item.name} onClick={() => handleclick(item.path, item.name)}>{item.name}</MenuItem>
+                <MenuItem id={item.name} key={item.name} onClick={() => handleclick(item.path, item.name)}>{item.name}</MenuItem>
             )
         }
     })
