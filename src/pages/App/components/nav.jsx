@@ -64,7 +64,7 @@ export default function Nav(props) {
         if (item.name.slice(-3) != ".md") {
             return (
                 // <li id={item.name} onClick={() => handleclick(item.path)}>{item.name}</li>
-                <MenuItem id={item.name} onClick={() => handleclick(item.path, item.name)}>{item.name}</MenuItem>
+                <MenuItem id={item.name} key={item.name} onClick={() => handleclick(item.path, item.name)}>{item.name}</MenuItem>
             )
         }
     })
@@ -72,12 +72,14 @@ export default function Nav(props) {
         <div className="main">
             <div className="main-nav">
                 <Menu matchWidth="true">
-                    <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                    <MenuButton as={Button} className="nav-drop-button" rightIcon={<ChevronDownIcon />}>
                         {Title}
                     </MenuButton>
-                    <MenuList className="nav-list" h='90vh' overflowY='scroll'>
-                        {list}
-                    </MenuList>
+                    <div className="nav-outer-list">
+                        <MenuList className="nav-list" h='90vh' overflowY='scroll'>
+                            {list}
+                        </MenuList>
+                    </div>
                 </Menu>
             </div>
             <div className="main-grid">

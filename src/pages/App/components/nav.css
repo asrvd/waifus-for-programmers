@@ -109,6 +109,14 @@ span {
     padding: 10px;
 }
 
+.nav-outer-list {
+    z-index: 3;
+}
+
+.search-icon {
+    z-index: 1;
+}
+
 @media screen and (max-width: 600px) {
     body, html {
         overflow-x: hidden;
@@ -129,11 +137,11 @@ span {
     }
     .main-grid {
         padding: 10px;
+        padding-top: 0;
         width: 100%;
         max-width: 100%;
         height: 100%;
         max-height: 90%;
-        margin-top: 10px;
     }
     .image-credit {
         font-size: 0.5em;
@@ -169,5 +177,7 @@ span {
     .grid-box {
         padding-right: 0;
     }
-    
+    .nav-drop-button {
+        width: 100% !important;
+    }
 }
