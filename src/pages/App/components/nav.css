@@ -13,7 +13,7 @@
     align-items: flex-start;
     width: 15%;
     height: 100%;
-    padding: 10px;
+    padding: 17px 0px 10px 10px;
     padding-right: 0;
 }
 
@@ -40,11 +40,15 @@
 
 .nav-head {
     width: 30%;
+    height: 100%;
 }
 
 .search-bar {
     margin-right: 20px;
     width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     min-width: auto;
 }
 
