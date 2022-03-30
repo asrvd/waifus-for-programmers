@@ -1,7 +1,7 @@
 import { getcont } from "../utils/api";
 import MainGrid from "./grid";
 import './nav.css'
-import { useState, useEffect } from "react";
+import { useState, useEffect, Component } from "react";
 import { PhoneIcon, AddIcon, WarningIcon, ChevronDownIcon, StarIcon } from '@chakra-ui/icons'
 import { FaGithub, FaDiscord, FaStar } from 'react-icons/fa'
 import { AiOutlineSearch } from "react-icons/ai"

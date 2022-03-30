@@ -64,6 +64,10 @@
     padding-right: 5%;
 }
 
+.noVis {
+    display: none;
+}
+
 .img {
     margin-bottom: 10px;
 }
