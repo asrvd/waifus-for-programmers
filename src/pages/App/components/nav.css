@@ -68,6 +68,24 @@
     padding-right: 5%;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.skeleton {
+    animation: skeleton-loading 2s ease-in-out alternate infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: #232b3c;
+    }
+
+    100% {
+        background-color: #2a3348;
+    }
+}
+
 .img {
     margin-bottom: 10px;
 }
