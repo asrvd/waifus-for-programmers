@@ -8,7 +8,8 @@ export default class MainGrid extends Component {
     constructor(props) {
         super(props);
     }
-
+    
+    // Credits: @TheRealDust
     componentDidUpdate() {
         const images = Array.from(document.querySelectorAll(".img"));
 
@@ -24,7 +25,6 @@ export default class MainGrid extends Component {
             })
         );
     }
-
 
     render() {
         const data = this.props.data
