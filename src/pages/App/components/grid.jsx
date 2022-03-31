@@ -12,33 +12,33 @@ export default class MainGrid extends Component {
     componentDidUpdate() {
         const images = Array.from(document.querySelectorAll(".img"));
 
-        // Once all images are loaded remove the `noVis` class to display them
-        Promise.all(images.map((image) => new Promise((resolve) => image.onload = resolve))).then(() => {
-            // images.map((image) => image.classList.remove("noVis"));
-            images.map((image) => image.classList.remove("skeleton"));
-            // this.props.onload();
-        });
+        // Apply skeleton to all image containers
+        images.map((image) => image.parentNode).filter((container) => !container.classList.contains("skeleton")).map((container) => container.classList.add("skeleton"));
+
+        // Once all images are loaded remove the `hidden` class to display them
+        Promise.all(images.map((image) => new Promise((resolve) => image.onload = resolve))).then(() =>
+            images.map((image) => {
+                image.classList.remove("hidden");
+                // Remove skeleton from container element
+                image.parentNode.classList.remove("skeleton");
+            })
+        );
     }
 
+
     render() {
-        //console.log(props.data)
         const data = this.props.data
-        //console.log(data)
-        const ims = data.map(item => {
-            // console.log('test');
-            return (
-                <ModalImage
-                    // className="img noVis"
-                    className="img skeleton"
-                    small={item.url}
-                    large={item.url}
-                    alt={item.name}
-                    key={item.key}
-                />
-            )
-        });
+        const ims = data.map(item =>
+            <ModalImage
+                className="img hidden"
+                small={item.url}
+                large={item.url}
+                alt={item.name}
+                key={item.key}
+            />
+        );
+
         return (
-            // <SimpleGrid columns={2} spacing={10} overflowY='scroll' h="100%" paddingRight={'10%'}>
             <Box
                 className='grid-box'
                 w="100%"
