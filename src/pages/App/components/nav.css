@@ -64,56 +64,21 @@
     padding-right: 5%;
 }
 
-/* .noVis {
-    display: none;
-} */
-
-.skeleton {
-    /* display: none; */
-    animation: skeleton-loading 1.2s ease-in-out infinite alternate;
-    /* animation: skeleton-loading 2s ease infinite alternate; */
-
-    /* These values were styling for a test div */
-    /* width: 200px;
-    height: 200px; */
+.hidden {
+    visibility: hidden;
 }
 
-.hidden {
-    /* display: none; */
-    visibility: hidden;
+.skeleton {
+    animation: skeleton-loading 2s ease-in-out alternate infinite;
 }
 
 @keyframes skeleton-loading {
     0% {
-        /* background-color: #222b3c */
-        background-color: #ff0000
-        /* background-color: #2a3549 */
+        background-color: #232b3c;
     }
-
-    20% {
-        background-color: #7300ff
-    }
-
-    40% {
-        background-color: #ffea00
-
-    }
-
-    60% {
-        background-color: #00ffb3
-
-    }
-
-    80% {
-        background-color: #ff00aa
-    }
-
-    /* Could add more keyframes in between for more control if required */
 
     100% {
-        /* background-color: #2c384d; */
-        /* background-color: #263042; */
-        background-color: #00aeff;
+        background-color: #2a3348;
     }
 }
 
