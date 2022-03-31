@@ -14,7 +14,8 @@ export default class MainGrid extends Component {
 
         // Once all images are loaded remove the `noVis` class to display them
         Promise.all(images.map((image) => new Promise((resolve) => image.onload = resolve))).then(() => {
-            images.map((image) => image.classList.remove("noVis"));
+            // images.map((image) => image.classList.remove("noVis"));
+            images.map((image) => image.classList.remove("skeleton"));
             // this.props.onload();
         });
     }
@@ -27,7 +28,8 @@ export default class MainGrid extends Component {
             // console.log('test');
             return (
                 <ModalImage
-                    className="img noVis"
+                    // className="img noVis"
+                    className="img skeleton"
                     small={item.url}
                     large={item.url}
                     alt={item.name}
