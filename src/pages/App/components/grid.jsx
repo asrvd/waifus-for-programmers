@@ -17,13 +17,24 @@ export default class MainGrid extends Component {
         images.map((image) => image.parentNode).filter((container) => !container.classList.contains("skeleton")).map((container) => container.classList.add("skeleton"));
 
         // Once all images are loaded remove the `hidden` class to display them
-        Promise.all(images.map((image) => new Promise((resolve) => image.onload = resolve))).then(() =>
+        Promise.all(images.map((image) => new Promise((resolve) => image.onload = resolve))).then(() => {
             images.map((image) => {
                 image.classList.remove("hidden");
                 // Remove skeleton from container element
                 image.parentNode.classList.remove("skeleton");
-            })
-        );
+            });
+
+            // Fetch author data
+            Promise.all(this.props.data.map((data) => data.author)).then((authors) =>
+                images.map((e, i) => [e, authors[i]] /* zip(images, authors) */).map(([image, author]) => {
+                    const authorSpan = document.createElement("span");
+                    authorSpan.innerText = `By ${author}`;
+                    authorSpan.className = "authorSpan";
+
+                    image.parentNode.appendChild(authorSpan);
+                }
+                ));
+        });
     }
 
     render() {
