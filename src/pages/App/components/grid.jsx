@@ -39,6 +39,7 @@ export default class MainGrid extends Component {
                 const data = patchedData.find(element => image.src == element.url);
                 // Display author over image
                 const authorDiv = document.createElement("div");
+                authorDiv.onclick = window.open(`https://github.com/${data.author}`, '_blank')
                 authorDiv.innerText = `@${data.author}`;
                 authorDiv.className = "authorDiv";
                 image.parentNode.appendChild(authorDiv);
