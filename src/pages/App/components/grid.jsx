@@ -8,7 +8,7 @@ export default class MainGrid extends Component {
     constructor(props) {
         super(props);
     }
-
+    
     // Credits: @TheRealDust
     componentDidUpdate() {
         const images = Array.from(document.querySelectorAll(".img"));
