@@ -39,5 +39,3 @@ export function getcont(path) {
         return newData
     })
 }
-
-//getfolders()
