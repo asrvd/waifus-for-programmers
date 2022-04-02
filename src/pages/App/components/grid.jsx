@@ -19,7 +19,7 @@ export default class MainGrid extends Component {
         applyClassToContainer("skeleton");
         applyClassToContainer("imageContainer");
 
-        // Once all images are loaded remove the `hidden` class to display them
+        // Wait for all images to be loaded
         Promise.all(images.map((image) => new Promise((resolve) => image.onload = resolve))).then(async () => {
             // Fetch author data 
             const authors = await Promise.all(this.props.data.map((data) => data.author));
@@ -31,13 +31,12 @@ export default class MainGrid extends Component {
             });
 
             images.map((image) => {
+                // Once all images are loaded remove the `hidden` & `skeleton` classes
                 image.classList.remove("hidden");
-                // Remove skeleton from container element
                 image.parentNode.classList.remove("skeleton");
 
                 // Find the data packet for this image
                 const data = patchedData.find(element => image.src == element.url);
-
                 // Display author over image
                 const authorDiv = document.createElement("div");
                 authorDiv.innerText = `@${data.author}`;
