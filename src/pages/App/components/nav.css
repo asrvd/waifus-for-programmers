@@ -65,7 +65,12 @@
 }
 
 .grid-box {
+    position: relative;
     padding-right: 5%;
+}
+
+.imageContainer {
+    position: relative;
 }
 
 .hidden {
@@ -86,8 +91,20 @@
     }
 }
 
-.authorSpan {
+.authorDiv {
+    float: left;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    padding: 3px;
+    padding-right: 8px;
+    padding-left: 8px ;
     z-index: 2;
+
+    background-color: #232b3c;
+    opacity: 80%;
+    border-radius: 0px 5px 0px 6px;
 }
 
 
