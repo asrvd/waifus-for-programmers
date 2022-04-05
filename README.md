@@ -9,7 +9,7 @@
 <div align="center">
   <h2>Overview</h2>
   A web viewer for <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books">Anime Girls Holding Programming Books</a> made using React, Chakra UI and Vite.</br>
-  You can view the app <a href="waifus-for-programmers.vercel.app">here</a>.
+  You can view the app <a href="https://waifus-for-programmers.vercel.app">here</a>.
 </div>
 
 ## Run locally
