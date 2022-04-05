@@ -1,35 +1,31 @@
-<h1 align="center">Waifus For Programmers 😳</h1>
 <div align="center">
-  <img title="a title" alt="Alt text" width="400" src="https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/master/Javascript/Ninomae_Ina'nis_Holding_Eloquent_Javascript.jpg">
+  <img align="center" src="https://i.imgur.com/XiOBprr.png" border-radius="50%" width="120px" height="120px"/>
+  <h2 align="center">Waifus For Programmers</h2>
+  <img src="https://api.visitorbadge.io/api/VisitorHit?user=asheeeshh&repo=waifus-for-programmers&countColor=%2337d67a" />
+  <img src="https://img.shields.io/github/license/asheeeshh/waifus-for-programmers?color=%2337d67a&style=for-the-badge" />
+  <img src="https://vercelbadge.vercel.app/api/asheeeshh/waifus-for-programmers?style=for-the-badge&color=%2337d67a" />
 </div>
+
 <div align="center">
-  ![GitHub](https://img.shields.io/github/license/asheeeshh/waifus-for-programmers?color=blue)
+  <h2>Overview</h2>
+  A web viewer for <a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books">Anime Girls Holding Programming Books</a> made using React, Chakra UI and Vite.</br>
+  You can view the app <a href="waifus-for-programmers.vercel.app">here</a>.
 </div>
-
-
-## Overview
-
-A website for Anime Girls Holding Programming Books made using React, Chakra UI and Vite.
 
 ## Run locally
 
-- Clone the repository
-
+Clone the repository
 ```bash
-git clone https://github.com/asheeeshh/waifus-for-programmers.git
+$ git clone https://github.com/asheeeshh/waifus-for-programmers.git
 ```
-
-- Install dependencies
-
+Install dependencies
 ```bash
-cd waifus-for-programmers
-npm i
+$ cd waifus-for-programmers
+$ npm i
 ```
-
-- Run the app
-
+Run the app
 ```bash
-npm run dev
+$ npm run dev
 ```
 
 ## Contributing
@@ -37,3 +33,18 @@ npm run dev
 - Fork the repository
 - Make your changes in a separate branch
 - Open a pull request
+
+## Contributors
+
+<a href="https://github.com/asheeeshh/waifus-for-programmers/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=asheeeshh/waifus-for-programmers" />
+</a>
+
+## Ending Note
+- Consider giving the repo a ⭐ if you liked the project!
+- You can add your own images [here](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books).
+</br>
+<div align="center">
+   <img src="https://img.shields.io/badge/Made%20With-%E2%9D%A4-%2337d67a?style=for-the-badge" /></br>
+   <a href="https://vercel.com?utm_source=waifus-for-programmers"><img src="https://raw.githubusercontent.com/abumalick/powered-by-vercel/master/powered-by-vercel.svg" /></a>
+</div>
