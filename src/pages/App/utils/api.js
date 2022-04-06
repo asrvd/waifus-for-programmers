@@ -33,18 +33,19 @@ export function getauthor(path) {
 }
 
 export function getcont(path) {
+    console.log(import.meta.env.VITE_APP_CI_TOKEN)
     return fetch(`https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/${encodeURIComponent(path)}?ref=master`)
     .then(res => res.json())
     .then(data => {
-        //console.log(data)
         const newData = data.map((file) => (
             {
                 name: file.name,
-                url: `${import.meta.env.VITE_APP_CI_TOKEN}.cloudimg.io/${file.download_url.substring(8)}?force_format=webp`,
+                url: `https://${import.meta.env.VITE_APP_CI_TOKEN}.cloudimg.io/${file.download_url.substring(8)}?force_format=webp`,
                 key: file.name,
                 path: file.path
             }
         ))
+        //console.log(newData[0])
         return newData
     })
 }
