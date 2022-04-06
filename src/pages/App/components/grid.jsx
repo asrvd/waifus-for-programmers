@@ -31,8 +31,8 @@ export default class MainGrid extends Component {
         const ims = data.map(item =>
             <ModalImage
                 className="img hidden"
-                small=`https://cdn.statically.io/img/${item.url.substring(8)}`
-                large=`https://cdn.statically.io/img/${item.url.substring(8)}`
+                small={item.url}
+                large={item.url}
                 alt={item.name}
                 key={item.key}
             />
