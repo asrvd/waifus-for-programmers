@@ -45,7 +45,7 @@ export function getcont(path) {
                 path: file.path
             }
         ))
-        console.log(newData[0])
+        //console.log(newData[0])
         return newData
     })
 }
