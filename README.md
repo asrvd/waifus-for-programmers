@@ -37,7 +37,7 @@ $ npm run dev
 ## Contributors
 
 <a href="https://github.com/asheeeshh/waifus-for-programmers/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=asheeeshh/waifus-for-programmers" />
+  <img src="https://stg.contrib.rocks/image?repo=asheeeshh/waifus-for-programmers" />
 </a>
 
 ## Ending Note
