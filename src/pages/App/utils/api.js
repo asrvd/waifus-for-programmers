@@ -40,7 +40,7 @@ export function getcont(path) {
         const newData = data.map((file) => (
             {
                 name: file.name,
-                url: `https://cdn.statically.io/img/${file.download_url.substring(8)}`,
+                url: `${import.meta.env.VITE_APP_CI_TOKEN}.cloudimg.io/${file.download_url.substring(8)}?force_format=webp`,
                 key: file.name,
                 path: file.path
             }
