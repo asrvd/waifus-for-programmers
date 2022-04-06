@@ -33,6 +33,7 @@ export function getauthor(path) {
 }
 
 export function getcont(path) {
+    console.log(import.meta.env.VITE_APP_CI_TOKEN)
     return fetch(`https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/${encodeURIComponent(path)}?ref=master`)
     .then(res => res.json())
     .then(data => {
