@@ -37,7 +37,6 @@ export function getcont(path) {
     return fetch(`https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/${encodeURIComponent(path)}?ref=master`)
     .then(res => res.json())
     .then(data => {
-        console.log(`${import.meta.env.VITE_APP_CI_TOKEN}.cloudimg.io/${file.download_url.substring(8)}?force_format=webp`)
         const newData = data.map((file) => (
             {
                 name: file.name,
@@ -46,6 +45,7 @@ export function getcont(path) {
                 path: file.path
             }
         ))
+        console.log(newData[0])
         return newData
     })
 }
