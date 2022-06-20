@@ -4,6 +4,7 @@ body {
   height: 120vh;
   width: 100vw;
   overflow: hidden;
+  padding-bottom: 15px;
 }
 
 #root {
@@ -13,9 +14,8 @@ body {
 
 .App {
   /* text-align: center; */
-  background-color: #1A202C;
+  background-color: #1a202c;
   background-image: none;
   width: 100vw;
   height: 120vh;
 }
-

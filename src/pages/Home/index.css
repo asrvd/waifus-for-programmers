@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,17 +9,15 @@ body {
   background-position-x: center;
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(
-      rgba(9, 13, 22, 0.5), 
-      rgba(9, 13, 22, 0.5)
-    ), url('https://i.imgur.com/tYWvQg7.png') !important;
+  background-image: linear-gradient(rgba(9, 13, 22, 0.5), rgba(9, 13, 22, 0.5)),
+    url("https://s6.imgcdn.dev/BJzZe.webp") !important;
   background-repeat: no-repeat !important;
-  background-color: #1A202C !important;
+  background-color: #1a202c !important;
   background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -30,7 +28,6 @@ code {
   justify-content: center;
   align-items: center;
 }
-
 
 .hero {
   height: 100%;
@@ -52,7 +49,6 @@ code {
   width: 100%;
 }
 
-
 @media screen and (max-width: 600px) {
   .hero-btns {
     flex-direction: column;
@@ -60,5 +56,4 @@ code {
   .hero {
     text-align: center;
   }
-  
 }

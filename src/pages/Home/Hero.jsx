@@ -1,17 +1,14 @@
 import React from "react";
 import {
   chakra,
-  Box,
-  useColorModeValue,
-  Flex,
   Button,
-  HStack,
 } from "@chakra-ui/react";
-import {Navigate, useNavigate} from 'react-router-dom'
-import './index.css'
+import { Navigate, useNavigate } from "react-router-dom";
+import "./index.css";
 
 const Hero = () => {
   let navigate = useNavigate();
+
   return (
     <div className="hero-container">
       <div className="hero">
@@ -36,39 +33,64 @@ const Hero = () => {
             An App made for Programmer Weebs.
           </chakra.h1>
           <chakra.p mb={5} color="gray.200" fontSize={{ md: "lg" }}>
-            A Simple Web Viewer for the Github Repository ~ <chakra.a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books" textDecoration={'underline'} color='cyan.300'>Anime Girls Holding Programming Books</chakra.a> made by <chakra.a href="https://github.com/asheeeshh" textDecoration={'underline'} color='cyan.300'>@asheeeshh</chakra.a>.
+            A Simple Web Viewer for the Github Repository ~{" "}
+            <chakra.a
+              href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books"
+              textDecoration={"underline"}
+              color="cyan.300"
+            >
+              Anime Girls Holding Programming Books
+            </chakra.a>{" "}
+            made by{" "}
+            <chakra.a
+              href="https://github.com/asheeeshh"
+              textDecoration={"underline"}
+              color="cyan.300"
+            >
+              @asheeeshh
+            </chakra.a>
+            .
           </chakra.p>
         </div>
         <div className="hero-btns">
-            <Button
-              as="a"
-              w={{ base: "full", sm: "auto" }}
-              variant="outline"
-              colorScheme={'cyan'}
-              size="lg"
-              marginRight={{md: '10px', lg: '10px', xl: '10px', sm:'10px', base: '0px'}}
-              mb={{ base: 2, sm: 0 }}
-              cursor="pointer"
-              onClick={() => {
-                navigate('/app')
-              }}
-            >
-              Continue to App
-            </Button>
-            <Button
-              as="a"
-              variant="outline"
-              colorScheme={'cyan'}
-              w={{ base: "full", sm: "auto" }}
-              mb={{ base: 2, sm: 0 }}
-              size="lg"
-              cursor="pointer"
-              onClick={() => {
-                window.open('https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books', '_blank')
-              }}
-            >
-              Add your own Images
-            </Button>
+          <Button
+            as="a"
+            w={{ base: "full", sm: "auto" }}
+            variant="outline"
+            colorScheme={"cyan"}
+            size="lg"
+            marginRight={{
+              md: "10px",
+              lg: "10px",
+              xl: "10px",
+              sm: "10px",
+              base: "0px",
+            }}
+            mb={{ base: 2, sm: 0 }}
+            cursor="pointer"
+            onClick={() => {
+              navigate("/app");
+            }}
+          >
+            Continue to App
+          </Button>
+          <Button
+            as="a"
+            variant="outline"
+            colorScheme={"cyan"}
+            w={{ base: "full", sm: "auto" }}
+            mb={{ base: 2, sm: 0 }}
+            size="lg"
+            cursor="pointer"
+            onClick={() => {
+              window.open(
+                "https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books",
+                "_blank"
+              );
+            }}
+          >
+            Add your own Images
+          </Button>
         </div>
       </div>
     </div>
@@ -76,5 +98,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-        
