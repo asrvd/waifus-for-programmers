@@ -34,12 +34,6 @@ $ npm run dev
 - Make your changes in a separate branch
 - Open a pull request
 
-## Contributors
-
-<a href="https://github.com/asrvd/waifus-for-programmers/graphs/contributors">
-  <img src="https://stg.contrib.rocks/image?repo=asrvd/waifus-for-programmers" />
-</a>
-
 ## Ending Note
 - Consider giving the repo a ⭐ if you liked the project!
 - You can add your own images [here](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books).
