@@ -57,16 +57,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   );
 
-  const images = files.data.map((file: any) => ({
-    name: file.name,
-    url: `https://${
-      process.env.CI_TOKEN
-    }.cloudimg.io/${file.download_url.substring(8)}?force_format=webp`,
-    key: file.name,
-    path: file.path,
-    html_url: file.html_url,
-    download_url: file.download_url,
-  }));
+  const images = files.data
+    .filter(
+      (file: any) =>
+        file.name !== "README.md" || file.name !== "CONTRIBUTING.md"
+    )
+    .map((file: any) => ({
+      name: file.name,
+      url: `https://${
+        process.env.CI_TOKEN
+      }.cloudimg.io/${file.download_url.substring(8)}?force_format=webp`,
+      key: file.name,
+      path: file.path,
+      html_url: file.html_url,
+      download_url: file.download_url,
+    }));
 
   if (images) {
     return {
