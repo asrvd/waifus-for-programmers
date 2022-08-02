@@ -30,6 +30,7 @@ const Home: NextPage = () => {
             <a
               className="text-rose-100 underline underline-offset-2 decoration-dotted cursor-pointer"
               target={"_blank"}
+              href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books"
             >
               anime-girls-holding-programming-books
             </a>
