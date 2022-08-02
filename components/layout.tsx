@@ -9,11 +9,7 @@ const Layout = ({ children }: Props) => {
   useEffect(() => {
     const getFolders = async () => {
       const folders = await fetch(
-        `${
-          process.env.NODE_ENV !== "production"
-            ? "http://localhost:3000"
-            : "https://waifus-for-programmers.vercel.app"
-        }/api/getFolders`
+        "https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/"
       );
       const folderValues = await folders.json();
       setSideBarData(folderValues);
