@@ -2,7 +2,6 @@
 import axios from "axios";
 import { GetStaticProps, GetStaticPaths } from "next";
 import type { NextPageWithLayout } from "../../_app";
-import type { ImgData } from "../../api/images/[slug]";
 import type { ReactElement } from "react";
 import Layout from "../../../components/layout";
 import { useEffect, useState } from "react";
@@ -10,20 +9,30 @@ import SearchBar from "../../../components/searchBar";
 import Header from "../../../components/header";
 import { FiMenu, FiX } from "react-icons/fi";
 
+type ImgData = {
+  name?: string;
+  path?: string;
+  key?: string;
+  url?: string;
+  html_url?: string;
+  download_url?: string;
+};
+
 type Props = {
   images?: ImgData[];
   slug?: string;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const folders = await fetch(
-    `${
-      process.env.NODE_ENV !== "production"
-        ? "http://localhost:3000"
-        : "https://waifus-for-programmers.vercel.app"
-    }/api/getFolders`
+  const folders = await axios.get(
+    "https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/",
+    {
+      headers: {
+        Authorization: `token ${process.env.GH_PAT}`,
+      },
+    }
   );
-  const folderValues = await folders.json();
+  const folderValues = await folders.data;
   const paths = folderValues
     .filter(
       (folder: any) =>
@@ -37,18 +46,32 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const files = await fetch(
-    `${
-      process.env.NODE_ENV !== "production"
-        ? "http://localhost:3000"
-        : "https://waifus-for-programmers.vercel.app"
-    }/api/images/${params?.slug}`
+  const files = await axios.get(
+    `https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/${encodeURIComponent(
+      params?.slug as string
+    )}?ref=master`,
+    {
+      headers: {
+        Authorization: `token ${process.env.GH_PAT}`,
+      },
+    }
   );
-  const fileValues = await files.json();
-  if (fileValues) {
+
+  const images = files.data.map((file: any) => ({
+    name: file.name,
+    url: `https://${
+      process.env.CI_TOKEN
+    }.cloudimg.io/${file.download_url.substring(8)}?force_format=webp`,
+    key: file.name,
+    path: file.path,
+    html_url: file.html_url,
+    download_url: file.download_url,
+  }));
+
+  if (images) {
     return {
       props: {
-        images: fileValues,
+        images: images,
         slug: params?.slug,
       },
     };
