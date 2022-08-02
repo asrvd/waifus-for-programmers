@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = folderValues
     .filter(
       (folder: any) =>
-        folder.name !== "README.md" || folder.name !== "CONTRIBUTING.md"
+        folder.name !== "README.md" && folder.name !== "CONTRIBUTING.md"
     )
     .map((folder: any) => ({
       params: { slug: folder.name },
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const images = files.data
     .filter(
       (file: any) =>
-        file.name !== "README.md" || file.name !== "CONTRIBUTING.md"
+        file.name !== "README.md" && file.name !== "CONTRIBUTING.md"
     )
     .map((file: any) => ({
       name: file.name,
