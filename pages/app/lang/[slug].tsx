@@ -16,7 +16,13 @@ type Props = {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const folders = await fetch("/api/getFolders");
+  const folders = await fetch(
+    `${
+      process.env.NODE_ENV !== "production"
+        ? "http://localhost:3000"
+        : "https://waifus-for-programmers.vercel.app"
+    }/api/getFolders`
+  );
   const folderValues = await folders.json();
   const paths = folderValues
     .filter(
@@ -31,7 +37,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const files = await fetch(`/api/images/${params?.slug}`);
+  const files = await fetch(
+    `${
+      process.env.NODE_ENV !== "production"
+        ? "http://localhost:3000"
+        : "https://waifus-for-programmers.vercel.app"
+    }/api/images/${params?.slug}`
+  );
   const fileValues = await files.json();
   if (fileValues) {
     return {

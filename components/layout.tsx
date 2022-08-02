@@ -8,7 +8,13 @@ const Layout = ({ children }: Props) => {
   const [sideBarData, setSideBarData] = useState<any>([]);
   useEffect(() => {
     const getFolders = async () => {
-      const folders = await fetch("/api/getFolders");
+      const folders = await fetch(
+        `${
+          process.env.NODE_ENV !== "production"
+            ? "http://localhost:3000"
+            : "https://waifus-for-programmers.vercel.app"
+        }/api/getFolders`
+      );
       const folderValues = await folders.json();
       setSideBarData(folderValues);
     };
