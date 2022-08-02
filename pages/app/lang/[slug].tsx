@@ -16,7 +16,7 @@ type Props = {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const folders = await fetch("http://localhost:3000/api/getFolders");
+  const folders = await fetch("/api/getFolders");
   const folderValues = await folders.json();
   const paths = folderValues
     .filter(
@@ -31,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const files = await fetch(`http://localhost:3000/api/images/${params?.slug}`);
+  const files = await fetch(`/api/images/${params?.slug}`);
   const fileValues = await files.json();
   if (fileValues) {
     return {

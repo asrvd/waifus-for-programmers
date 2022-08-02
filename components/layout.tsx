@@ -8,7 +8,7 @@ const Layout = ({ children }: Props) => {
   const [sideBarData, setSideBarData] = useState<any>([]);
   useEffect(() => {
     const getFolders = async () => {
-      const folders = await fetch("http://localhost:3000/api/getFolders");
+      const folders = await fetch("/api/getFolders");
       const folderValues = await folders.json();
       setSideBarData(folderValues);
     };
