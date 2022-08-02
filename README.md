@@ -1,9 +1,9 @@
 <div align="center">
   <img align="center" src="https://i.imgur.com/XiOBprr.png" border-radius="50%" width="120px" height="120px"/>
   <h2 align="center">Waifus For Programmers</h2>
-  <img src="https://api.visitorbadge.io/api/VisitorHit?user=asheeeshh&repo=waifus-for-programmers&countColor=%2337d67a" />
-  <img src="https://img.shields.io/github/license/asheeeshh/waifus-for-programmers?color=%2337d67a&style=for-the-badge" />
-  <img src="https://vercelbadge.vercel.app/api/asheeeshh/waifus-for-programmers?style=for-the-badge&color=%2337d67a" />
+  <img src="https://api.visitorbadge.io/api/VisitorHit?user=asrvd&repo=waifus-for-programmers&countColor=%2337d67a" />
+  <img src="https://img.shields.io/github/license/asrvd/waifus-for-programmers?color=%2337d67a&style=for-the-badge" />
+  <img src="https://vercelbadge.vercel.app/api/asrvd/waifus-for-programmers?style=for-the-badge&color=%2337d67a" />
 </div>
 
 <div align="center">
@@ -16,7 +16,7 @@
 
 Clone the repository
 ```bash
-$ git clone https://github.com/asheeeshh/waifus-for-programmers.git
+$ git clone https://github.com/asrvd/waifus-for-programmers.git
 ```
 Install dependencies
 ```bash
@@ -36,8 +36,8 @@ $ npm run dev
 
 ## Contributors
 
-<a href="https://github.com/asheeeshh/waifus-for-programmers/graphs/contributors">
-  <img src="https://stg.contrib.rocks/image?repo=asheeeshh/waifus-for-programmers" />
+<a href="https://github.com/asrvd/waifus-for-programmers/graphs/contributors">
+  <img src="https://stg.contrib.rocks/image?repo=asrvd/waifus-for-programmers" />
 </a>
 
 ## Ending Note
