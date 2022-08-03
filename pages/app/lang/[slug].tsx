@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import SearchBar from "../../../components/searchBar";
 import Header from "../../../components/header";
 import { FiMenu, FiX } from "react-icons/fi";
+import Router from "next/router";
 
 type ImgData = {
   name?: string;
@@ -94,20 +95,32 @@ const Index: NextPageWithLayout = (props: Props) => {
   const [filteredImages, setFilteredImages] = useState<ImgData[]>(
     props?.images ? props?.images : []
   );
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setFilteredImages(props?.images ? props?.images : []);
   }, [props?.images]);
+  useEffect(() => {
+    Router.events.on("routeChangeStart", () => {
+      setIsLoading(true);
+    });
+    Router.events.on("routeChangeComplete", () => {
+      setIsLoading(false);
+    });
+    Router.events.on("routeChangeError", () => {
+      setIsLoading(false);
+    });
+  }, []);
   const [showSideBar, setShowSideBar] = useState<boolean>(false);
 
   return (
     <div
       className={
         showSideBar === false
-          ? "fixed lg:static md:static z-[5000] flex flex-col p-4 items-center w-screen lg:w-[80%] md:w-[90%] bg-zinc-900 h-screen pb-8 lg:pb-4 "
-          : "z-0 relative flex flex-col p-4 items-center w-screen lg:w-[80%] md:w-[90%] bg-zinc-900 h-screen pb-12 lg:pb-4"
+          ? "overflow-y-scroll fixed lg:static md:static z-[5000] flex flex-col p-4 pt-0 items-center w-screen lg:w-[80%] md:w-[90%] bg-zinc-900 h-screen pb-0"
+          : "z-0 relative flex flex-col p-4 pt-0 items-center w-screen lg:w-[80%] md:w-[90%] bg-zinc-900 h-screen pb-0 overflow-y-scroll"
       }
     >
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full items-center pb-4">
+      <div className="sticky top-0 z-50 pt-4 bg-zinc-900 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full items-center pb-4">
         <div className="flex gap-4 sm:w-full md:w-full lg:w-[100%] lg:col-span-2">
           <SearchBar
             imageValues={props.images}
@@ -127,11 +140,16 @@ const Index: NextPageWithLayout = (props: Props) => {
           <Header />
         </div>
       </div>
-      <div className="relative gallery lg:columns-3 md:columns-3 sm:columns-2 gap-4 overflow-y-scroll bg-zinc-900">
+
+      <div className="relative gallery lg:columns-3 md:columns-3 sm:columns-2 gap-4  bg-zinc-900">
         {filteredImages.map((image) => (
           <div
             key={image.name}
-            className="rounded-lg mb-4 shaodw-xl cursor-pointer"
+            className={
+              isLoading === true
+                ? "rounded-lg mb-4 shaodw-xl cursor-pointer bg-zinc-500 animate-pulse duration-700"
+                : "rounded-lg mb-4 shaodw-xl cursor-pointer bg-zinc-500"
+            }
           >
             <img
               src={image.url}
@@ -139,7 +157,9 @@ const Index: NextPageWithLayout = (props: Props) => {
               onClick={() => {
                 window.open(image.download_url, "_blank");
               }}
-              className="w-full saturate-150 rounded-md lg:grayscale hover:grayscale-0 duration-300"
+              className={`w-full saturate-150 rounded-md lg:grayscale hover:grayscale-0 duration-300 ${
+                isLoading === true && "blur-md"
+              }`}
             />
           </div>
         ))}

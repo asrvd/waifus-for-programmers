@@ -20,7 +20,7 @@ export default function Sidebar(props: any) {
                   : "flex cursor-pointer focus:ring-2 focus:bg-zinc-600 ring-offset-rose-300 hover:shadow-2xl hover:-translate-y-1 duration-300 hover:bg-zinc-600 md:text-sm text-base lg:text-base ring-rose-100 justify-start items-center bg-zinc-700 p-2 rounded shadow-2xl w-full text-gray-200 hover:text-rose-200"
               }
               onClick={() => {
-                router.push(`/app/lang/${folder.name}`);
+                router.push(`/app/lang/${encodeURIComponent(folder.name)}`);
               }}
             >
               <p>{folder.name}</p>
