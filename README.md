@@ -1,5 +1,5 @@
 <div align="center">
-  <img align="center" src="https://i.imgur.com/XiOBprr.png" border-radius="50%" width="120px" height="120px"/>
+  <img align="center" src="https://cdn3.emoji.gg/emojis/5608-zerotwo-flushed.png" border-radius="50%" width="100px" height="100px"/>
   <h2 align="center">Waifus For Programmers</h2>
   <img src="https://api.visitorbadge.io/api/VisitorHit?user=asrvd&repo=waifus-for-programmers&countColor=%2337d67a" />
   <img src="https://img.shields.io/github/license/asrvd/waifus-for-programmers?color=%2337d67a&style=for-the-badge" />
