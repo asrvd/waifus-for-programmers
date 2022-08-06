@@ -2,7 +2,8 @@ import { useRouter } from "next/router";
 
 export default function Sidebar(props: any) {
   const router = useRouter();
-  const currentPath = router.asPath.substring(10);
+  const currentPath = router.asPath.substring(10).slice(0, -1);
+  // console.log(currentPath)
   return (
     <div className="sidebar fixed lg:static md:static z-[2000] bg-zinc-800 h-screen overflow-y-scroll lg:z-0 md:z-0 w-[78%] lg:w-full md:w-full">
       <div className="flex flex-col p-4 justify-center w-full items-center gap-4 bg-zinc-800">
