@@ -15,6 +15,7 @@ const Home: NextPage = () => {
           >
             Home
           </a>
+          -
           <a
             className="cursor-pointer duration-300 hover:text-rose-50 underline underline-offset-2 decoration-dotted"
             href="/app/lang/ABAP"
