@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import PoweredByVercel from "./vercel";
 
 export default function Sidebar(props: any) {
   const router = useRouter();
@@ -27,6 +28,7 @@ export default function Sidebar(props: any) {
               <p>{folder.name}</p>
             </button>
           ))}
+          <PoweredByVercel />
       </div>
     </div>
   );

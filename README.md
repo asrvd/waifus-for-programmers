@@ -40,5 +40,5 @@ $ npm run dev
 </br>
 <div align="center">
    <img src="https://img.shields.io/badge/Made%20With-%E2%9D%A4-%2337d67a?style=for-the-badge" /></br>
-   <a href="https://vercel.com?utm_source=waifus-for-programmers"><img src="https://raw.githubusercontent.com/abumalick/powered-by-vercel/master/powered-by-vercel.svg" /></a>
+   <a href="https://vercel.com?utm_source=waifus-for-programmers&utm-campaign=oss"><img src="https://raw.githubusercontent.com/abumalick/powered-by-vercel/master/powered-by-vercel.svg" /></a>
 </div>

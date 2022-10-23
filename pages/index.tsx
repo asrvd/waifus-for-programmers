@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import PoweredByVercel from "../components/vercel";
 
 const Home: NextPage = () => {
   return (
@@ -48,7 +47,7 @@ const Home: NextPage = () => {
           </p>
         </div>
         <div>
-          <p className=" text-rose-100 font-semibold tracking-wide text-xl lg:text-2xl">
+          <p className=" text-rose-100 font-semibold tracking-wide text-xl lg:text-2xl mb-2">
             made with {`<3 & </>`} by{" "}
             <a
               className="cursor-pointer duration-300 hover:text-rose-50 underline underline-offset-2 decoration-dotted"
@@ -59,6 +58,7 @@ const Home: NextPage = () => {
               ashish
             </a>
           </p>
+          <PoweredByVercel />
         </div>
       </div>
     </div>
