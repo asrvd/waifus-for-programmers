@@ -37,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = folderValues
     .filter(
       (folder: any) =>
-        folder.name !== "README.md" && folder.name !== "CONTRIBUTING.md"
+        folder.name !== "README.md" && folder.name !== "CONTRIBUTING.md" && folder.name !== ".DS_STORE"
     )
     .map((folder: any) => ({
       params: { slug: folder.name },
