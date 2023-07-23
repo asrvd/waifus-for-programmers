@@ -11,7 +11,7 @@ export default function Sidebar(props: any) {
         {props?.folders
           ?.filter(
             (folder: any) =>
-              folder.name !== "README.md" && folder.name !== "CONTRIBUTING.md"
+              folder.name !== "README.md" && folder.name !== "CONTRIBUTING.md" && folder.name !== ".DS_Store"
           )
           .map((folder: any) => (
             <button
